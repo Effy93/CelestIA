@@ -1,5 +1,12 @@
 const formLogin = document.getElementById("loginForm");
 const errorLogin = document.getElementById("error");
+const goRegister = document.getElementById("goRegister");
+
+if (goRegister) {
+  goRegister.addEventListener("click", () => {
+    window.location.href = "register.html";
+  });
+}
 
 if (formLogin) {
   formLogin.addEventListener("submit", function(e) {
@@ -8,18 +15,14 @@ if (formLogin) {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
-    const user = JSON.parse(localStorage.getItem("user"));
+    const result = auth.login(email, password);
 
-    if (!user) {
-      errorLogin.textContent = "Aucun utilisateur inscrit !";
+    if (!result.success) {
+      errorLogin.textContent = result.message;
       return;
     }
 
-    if (email === user.email && password === user.password) {
-      alert("Connexion réussie !");
-      window.location.href = "profile.html";
-    } else {
-      errorLogin.textContent = "Email ou mot de passe incorrect";
-    }
+    alert("Connexion réussie !");
+    window.location.href = "profile.html";
   });
 }

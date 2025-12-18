@@ -3,10 +3,12 @@
  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="controller/auth.js" defer></script>
+<!-- Pour version finale -->
+<!-- <script src="js/auth.prod.js"></script> -->
     <script src="controller/register.js" defer></script>
-    <script src="controller/login.js" defer></script>
     <title>Register</title>
  </head>
  <body>
@@ -16,7 +18,6 @@
             <img src="assets/img/logo-home.png" alt="Accueil">
             </a>
             <div class="header-content">
-                <a href="register.html" id="nav-btn-register">S'inscrire</a>
                 <a href="login.html" id="nav-btn-login">Se connecter</a>
             </div>
         </nav>
@@ -42,7 +43,9 @@
 
                 <p id="error"></p>
 
-                <button id="btnRegister" type="submit">S'inscrire</button>
+                <div class="formItem">
+                    <button id="btnRegister" type="submit">S'inscrire</button>
+                </div>
             </form>
         </div>
     </main>

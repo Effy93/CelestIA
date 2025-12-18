@@ -3,10 +3,12 @@
  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="controller/auth.js" defer></script>
-    <script src="controller/register.js" defer></script>
-    <script src="controller/login.js" defer></script>
+<!-- Pour version finale -->
+<!-- <script src="js/auth.prod.js"></script> -->
+    <script src="controller/profile.js" defer></script>
     <title>Profile</title>
  </head>
  <body>
@@ -22,8 +24,7 @@
     </header>
     <main>
         <div class="content">
-            <h1> Profil Utilisateur </h1>
-            <p> Bienvenue sur votre espace personnel. </p>
+            <h1 id="userName"> Bienvenue </h1>
         </div>
     </main>
     <footer>
