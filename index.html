@@ -7,7 +7,8 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/home.css">
         <script src="controller/auth.js" defer></script>
-        <script src="js/home.js" defer></script>
+        <script src="controller/home.js" defer></script>
+        <script src="js/home-style.js" defer></script>
         <title>Accueil | Celest IA</title>
         <meta name="description" content="Découvrez Celest IA, une plateforme dédiée à l’intelligence artificielle, explorez nos agents IA et les fonctionnalités proposées.">
     </head>
@@ -20,9 +21,14 @@
                 </a>
                 <div class="header-content">
                     <a href="login.html" id="nav-btn-login">Se connecter</a>
+                    <a href="profile.html" id="nav-btn-profile" style="display:none;">
+                        <img src="assets/img/logo/profile.svg" alt="Profil">
+                    </a>
+                    <img src="assets/img/logo/logout.svg" alt="Se déconnecter" id="nav-btn-logout" style="display:none;">
                 </div>
             </nav>
         </header>
+        
 
         <main class="main-container">
             <header class="main-header">

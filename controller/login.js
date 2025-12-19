@@ -17,12 +17,11 @@ if (formLogin) {
 
     const result = auth.login(email, password);
 
-    if (!result.success) {
-      errorLogin.textContent = result.message;
-      return;
-    }
+   if (result.success) {
+    window.location.href = "profile.html"; // redirection directe
+  } else {
+    errorLogin.textContent = result.message; // affiche l'erreur
+  }
 
-    alert("Connexion réussie !");
-    window.location.href = "profile.html";
   });
 }

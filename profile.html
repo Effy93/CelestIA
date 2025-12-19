@@ -8,6 +8,7 @@
         <script src="controller/auth.js" defer></script>
     <!-- Pour version finale -->
     <!-- <script src="js/auth.prod.js"></script> -->
+        <script src="controller/home.js" defer></script>
         <script src="controller/profile.js" defer></script>
         <title> Profil | Celest IA</title>
         <meta name="description" content="Accédez à votre profil Celest IA pour gérer vos informations personnelles et vos agents IA.">
@@ -20,7 +21,8 @@
                 <img src="assets/img/logo/logo-home.png" alt="Accueil">
                 </a>
                 <div class="header-content">
-                    <img src="assets/img/logout.svg" alt="Se déconnecter" id="nav-btn-logout">
+                    <a href="login.html" id="nav-btn-login">Se connecter</a>
+                    <img src="assets/img/logo/logout.svg" alt="Se déconnecter" id="nav-btn-logout" style="display:none;">
                 </div>
             </nav>
         </header>
@@ -42,5 +44,6 @@
                 <a href="">Mentions Légales</a>
             </div>
         </footer>
+    
     </body>
 </html> 
