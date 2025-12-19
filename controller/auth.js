@@ -1,5 +1,6 @@
 // Logique métier : objet littéral gérant l'inscription, le login, le logout,
 // l'état d'authentification et la récupération de l'utilisateur.
+
 const auth = {
 
   register: function(name, email, password) {
