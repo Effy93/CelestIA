@@ -79,6 +79,8 @@ CelestIA/
 ├── login.html
 ├── register.html
 ├── profile.html
+├── legal-notice.html
+├── privacy-policy.html
 │
 ├── assets/
 │   ├── img/

@@ -1,0 +1,78 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 1rem 2rem; /* padding top pour header fixe */
+    flex: 1;
+}
+
+/* MAIN CONTAINER */
+.legal-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 1rem;
+    flex: 1;
+}
+
+.legal-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    background-color: #f0efef;
+    border-radius: 25px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+/* HEADINGS */
+.legal-box h1 {
+    font-size: 1.8rem;
+    color: #162447;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.legal-box h2 {
+    font-size: 1.4rem;
+    color: #162447;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* PARAGRAPHS */
+.legal-box p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    margin: 0.5rem 0;
+}
+
+/* LINKS */
+.legal-box a {
+    color: #8a2be2;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.legal-box a:hover {
+    color: #2e8eff;
+}
+
+/* SECTION GAP */
+.legal-box section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+
+
