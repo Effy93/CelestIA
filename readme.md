@@ -1,72 +1,72 @@
-# **README.md – CelestIA **
 
+---
 
 # CelestIA 🌌
 
-[![HTML](https://img.shields.io/badge/HTML5-%23E34F26.svg?style=flat&logo=html5&logoColor=white)](https://developer.mozilla.org/fr/docs/Web/HTML) 
-[![CSS](https://img.shields.io/badge/CSS3-%231572B6.svg?style=flat&logo=css3&logoColor=white)](https://developer.mozilla.org/fr/docs/Web/CSS) 
-[![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?style=flat&logo=javascript&logoColor=black)](https://developer.mozilla.org/fr/docs/Web/JavaScript) 
-[![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-%23121011.svg?style=flat&logo=github&logoColor=white)](https://<ton-username>.github.io/CelestIA/)
+
+[![HTML](https://img.shields.io/badge/HTML5-%23E34F26.svg?style=flat\&logo=html5\&logoColor=white)](https://developer.mozilla.org/fr/docs/Web/HTML)
+[![CSS](https://img.shields.io/badge/CSS3-%231572B6.svg?style=flat\&logo=css3\&logoColor=white)](https://developer.mozilla.org/fr/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?style=flat\&logo=javascript\&logoColor=black)](https://developer.mozilla.org/fr/docs/Web/JavaScript)
+[![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-%23121011.svg?style=flat\&logo=github\&logoColor=white)](https://effy-93.github.io/CelestIA/)
 
 ---
 
 ## 🌌 Présentation
 
-**CelestIA** est un projet réalisé dans le cadre de la formation CDA.  
-C’est un site web simulant la gestion d’un utilisateur avec **inscription, connexion et profil**.
+**CelestIA** est un projet réalisé dans le cadre de la formation CDA.
+Il s’agit d’un site web simulant la gestion d’un utilisateur avec **inscription, connexion et profil**.
 
-Fonctionnalités principales :
+### Fonctionnalités principales
 
-- Page d’accueil avec navigation dynamique (Login → Profil si connecté)  
-- Page d’inscription et de connexion fonctionnelle  
-- Profil minimaliste affichant le nom utilisateur  
-- Header dynamique et responsive  
-- Déploiement sur GitHub Pages  
+* Page d’accueil avec navigation dynamique (Login → Profil si connecté)
+* Formulaires d’inscription et de connexion fonctionnels
+* Profil minimaliste affichant le nom de l’utilisateur
+* Header dynamique et responsive
+* Déploiement sur GitHub Pages
 
 ---
 
 ## 🖼 Maquette
 
-![Accueil](assets//mockup/CelestIA.png)  
+![Accueil](assets/mockup/CelestIA.png)
 *Maquette complète avec Figma*
 
-![Profil](assets/mockup/390-Accueil.png)  
-*Exemple de la page d’accueil*
-
-## 🖼 Capture d'écran
+![Profil](assets/mockup/390-Accueil.png)
+*Exemple de la page profil*
 
 ---
 
 ## 📄 Pages
 
-| Page            | URL                  | Description |
-|-----------------|--------------------|-------------|
-| Accueil          | `index.html`       | Page principale, affiche login ou profil + logout si connecté |
-| Inscription      | `register.html`    | Formulaire pour créer un utilisateur |
-| Connexion        | `login.html`       | Formulaire de connexion, redirection vers profil |
-| Profil           | `profile.html`     | Affiche dynamiquement le nom de l’utilisateur, logout disponible |
+| Page        | URL             | Description                                                      |
+| ----------- | --------------- | ---------------------------------------------------------------- |
+| Accueil     | `index.html`    | Page principale, affiche login ou profil + logout si connecté    |
+| Inscription | `register.html` | Formulaire pour créer un utilisateur                             |
+| Connexion   | `login.html`    | Formulaire de connexion, redirection vers profil                 |
+| Profil      | `profile.html`  | Affiche dynamiquement le nom de l’utilisateur, logout disponible |
 
 ---
 
 ## ⚙ Fonctionnalités
 
-- Inscription et connexion simulées avec **LocalStorage**  
-- Vérification de l’état connecté (`isLogged`)  
-- Redirection automatique vers login si non connecté  
-- Header dynamique :  
-  - Affiche “Se connecter” si utilisateur non connecté  
-  - Affiche “Profil” et logout si connecté  
-- Profil minimaliste (nom affiché dynamiquement)  
+* Inscription et connexion simulées avec **LocalStorage**
+* Vérification de l’état connecté (`isLogged`)
+* Redirection automatique vers login si non connecté
+* Header dynamique :
+
+  * Affiche “Se connecter” si utilisateur non connecté
+  * Affiche “Profil” et logout si connecté
+* Profil minimaliste (nom affiché dynamiquement)
 
 ---
 
 ## 🛠 Technologies utilisées
 
-- **HTML5**  
-- **CSS3** (responsive mobile first)  
-- **JavaScript** (vanilla JS)  
-- **LocalStorage** pour la gestion de l’utilisateur  
-- **Git / GitHub** pour le versionnement et le déploiement  
+* **HTML5**
+* **CSS3** (responsive mobile first)
+* **JavaScript** (vanilla JS)
+* **LocalStorage** pour la gestion de l’utilisateur
+* **Git / GitHub** pour le versionnement et le déploiement
 
 ---
 
@@ -85,50 +85,52 @@ CelestIA/
 │   │   ├── logo/
 │   │   ├── avatar/
 │   │   └── icons/
+│   ├── mockup/
+│       └── maquettes Figma
 │
-│	├── mockup/
-│		│── maquette 
-│		
 ├── css/
 │   ├── reset.css
 │   ├── style.css
 │   ├── home.css
+│   └── profile.css
 │
 ├── controller/
 │   ├── header.js
 │   ├── home.js
 │   ├── login.js
+│   ├── logout.js
 │   ├── register.js
+│   ├── profile.js
+│   └── profile-edit.js
 │
 ├── model/
 │   ├── user.js
 │   └── agents.js
 │
 ├── view/
-│   └── agent-renderer.js
-	└── home-ui.js
-	└── profile-ui.js
+│   ├── agent-renderer.js
+│   ├── home-ui.js
+│   └── profile-ui.js
 │
 └── README.md
-
 ```
 
 ---
 
 ## 🚀 Installation et utilisation
 
-1. **Cloner le dépôt** :
+1. **Cloner le dépôt** (optionnel si tu veux le code) :
 
 ```bash
 git clone https://github.com/Effy-93/CelestIA.git
-````
+```
 
-2. **Ouvrir `index.html`** dans un navigateur moderne.
+2. **Ouvrir le site en ligne** : [CelestIA sur GitHub Pages](https://effy-93.github.io/CelestIA/)
 3. **Tester l’inscription et la connexion**.
 4. La page profil affichera dynamiquement le nom de l’utilisateur.
 
 > 💡 L’état de connexion est conservé dans le **LocalStorage**.
-> Pour réinitialiser : ouvrir les DevTools → Application → LocalStorage → Supprimer `user` et `isLogged`.
+> Pour réinitialiser : ouvrir les DevTools → Application → LocalStorage → supprimer `user` et `isLogged`.
 
 ---
 
@@ -187,8 +189,6 @@ git clone https://github.com/Effy-93/CelestIA.git
 ## Auteur
 
 **Eva Philippo** – Projet de formation Concepteur Développeur d'Application
-
-
 
 ---
 
