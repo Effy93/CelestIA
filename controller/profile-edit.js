@@ -7,17 +7,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const editBtn = document.getElementById("editProfileBtn");
   const form = document.getElementById("editProfileForm");
   const nameInput = document.getElementById("editName");
-  const emailInput = document.getElementById("editEmail");
 
-  if (!editBtn || !form) return;
+  if (!editBtn || !form || !nameInput) return;
 
   // Pré-remplir le formulaire
   nameInput.value = user.name;
-  emailInput.value = user.email;
 
   // Afficher / cacher le formulaire
   editBtn.addEventListener("click", () => {
-    form.style.display = form.style.display === "none" ? "block" : "none";
+    form.style.display =
+      form.style.display === "none" ? "block" : "none";
   });
 
   // Soumission du formulaire
@@ -25,27 +24,20 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
 
     const newName = nameInput.value.trim();
-    const newEmail = emailInput.value.trim();
+    if (!newName) return;
 
     // Récupérer tous les utilisateurs
     const users = JSON.parse(localStorage.getItem("users")) || [];
 
-    // Vérifier si le nouvel email est déjà utilisé par un autre
-    const emailExistant = users.find(u => u.email === newEmail && u.email !== user.email);
-    if (emailExistant) {
-      return alert("Cet email est déjà utilisé !");
-    }
+    // Mettre à jour l’utilisateur (identifié par email)
+    const index = users.findIndex(u => u.email === user.email);
+    if (index === -1) return;
 
-    // Mettre à jour l’utilisateur
+    users[index].name = newName;
     user.name = newName;
-    user.email = newEmail;
 
-    const index = users.findIndex(u => u.email === user.email || u === user);
-    users[index] = user;
-
-    // Sauvegarder dans localStorage
+    // Sauvegarde
     localStorage.setItem("users", JSON.stringify(users));
-    localStorage.setItem("loggedEmail", newEmail); // si l'email change
 
     alert("Profil mis à jour ✅");
     window.location.reload();

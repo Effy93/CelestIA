@@ -1,5 +1,5 @@
-/************************/
-/* INITIALISE : Flexbox */
+ /************************/
+/* BASE */
 /************************/
 
 html, body {
@@ -8,10 +8,7 @@ html, body {
   overflow-x: hidden;
 }
 
-/* Box sizing fix */
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
@@ -26,7 +23,7 @@ main {
 }
 
 /************************/
-/* Floating nav bar  */
+/* HEADER / NAVBAR */
 /************************/
 
 .header {
@@ -35,15 +32,12 @@ main {
   left: 0;
   width: 100%;
   height: 60px;
-  background-image: url('../assets/img//logo/logo.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url('../assets/img/logo/logo.png') center / cover no-repeat;
   display: flex;
   align-items: center;
+  padding: 0 1.5vw;
   z-index: 1000;
-  padding: 0 1.5vw; 
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 .header-content {
@@ -64,97 +58,101 @@ main {
   height: 40px;
 }
 
-#nav-btn-profile, #nav-btn-profile img {
-  padding: auto;
-  margin: auto;
+#nav-btn-profile,
+#nav-btn-profile img {
   width: 30px;
   height: 30px;
+  margin: auto;
   cursor: pointer;
 }
 
 #nav-btn-logout {
-  padding: auto;
-  margin: auto;
   width: 48px;
   height: 48px;
+  margin: auto;
   cursor: pointer;
 }
 
-#nav-btn-login, #nav-btn-register {
+#nav-btn-login,
+#nav-btn-register {
   padding: 0.5vw 1vw;
   text-decoration: none;
   cursor: pointer;
 }
 
 .nav-logo:hover,
-#nav-btn-logout:hover,
-#nav-btn-profile:hover {
+#nav-btn-profile:hover,
+#nav-btn-logout:hover {
   transform: scale(1.2);
   transition: transform 0.2s ease;
 }
 
-/*******************************************************/
-/* Main content : form, input, button, message error  */
-/*****************************************************/
+/************************/
+/* MAIN CONTENT */
+/************************/
 
 .content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
 }
 
 form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   width: 100%;
   max-width: 18rem;
-  margin : 20px;
-  padding : 20px;
+  margin: 20px;
+  padding: 20px;
   background-color: #D9D9D9;
   border-radius: 4px;
-  
 }
 
-label{
-  margin: 10px 0 5px 0;
+label {
+  margin: 10px 0 5px;
   padding-left: 10px;
-  
 }
 
 input {
   margin: 0.75em 0;
   padding: 0.75em;
-  box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 4px;
   background-color: #A0A0D5;
 }
 
 input::placeholder {
-  color: #fffdfd;
+  color: #fff;
 }
 
-#btnLogin, #btnRegister {
+/************************/
+/* BUTTONS */
+/************************/
+
+#btnLogin,
+#btnRegister,
+.btn-primary {
   background-color: #D27DFB;
   border: none;
   border-radius: 4px;
   padding: 8px 10px;
-  margin: 4px 2px;
+  margin: 4px auto;
   font-size: 16px;
-  text-align: center;
-  text-decoration: none;
-  color: white;
+  color: #fff;
   cursor: pointer;
+  display: block;
 }
 
-#btnLogin:hover, #btnRegister:hover {
+#btnLogin:hover,
+#btnRegister:hover {
   background-color: #BB5EDB;
-  transition: color 0.3s;
+  transition: background-color 0.3s;
 }
 
+/************************/
+/* ERRORS */
+/************************/
 
 #error {
   color: red;
@@ -162,13 +160,13 @@ input::placeholder {
   text-align: center;
 }
 
-/***********************************************************************/
-/* FormItem : signIn + goRegister = lien pas de compte, inscrivez vous */
-/***********************************************************************/
+/************************/
+/* FORM LINKS */
+/************************/
 
 .formItem {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: center;
   gap: 10px;
   margin: 10px auto;
@@ -176,57 +174,53 @@ input::placeholder {
 
 #signIn {
   display: flex;
-  flex-wrap: nowrap;      
-  justify-content: center;
   align-items: center;
   gap: 5px;
-  margin: 0;
   white-space: nowrap;
 }
 
 #goRegister {
   color: #6a5acd;
   font-weight: 600;
-  cursor: pointer;
   text-decoration: none;
+  cursor: pointer;
 }
 
 #goRegister:hover {
-  color:  #BB5EDB;
+  color: #BB5EDB;
   text-decoration: underline;
   transition: color 0.3s;
 }
 
-/**********/
-/* footer */
-/**********/
+/************************/
+/* FOOTER */
+/************************/
 
 footer {
   background-color: #f5f5f5;
   padding: 20px;
   text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 
 .footer-logos {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: center;
-  max-width: 200px; 
+  max-width: 200px;
   margin: 0 auto;
   padding-bottom: 10px;
 }
 
 .footer-logos img {
-  width: 40px; 
-  height: auto;
+  width: 40px;
 }
 
 .footer-links {
   display: flex;
-  justify-content: center; 
-  gap: 20px; 
-  flex-wrap: wrap; 
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .footer-links a {
@@ -238,79 +232,78 @@ footer {
 
 .footer-links a:hover {
   color: #0073b1;
-  transition: transform 0.2s ease;
 }
 
-
 /************************/
-/* LOGO CONNEXION */
+/* USER PROFILE ICON */
 /************************/
 
 .user-profile {
-  width: 2.5rem; /*taille*/
+  width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
-
-  background: #1a1a1a;
-  cursor: pointer;
-
-  outline: 1.5px solid transparent;
-  outline-offset: 2px;
-  background-image: linear-gradient(#1a1a1a, #1a1a1a),
-                    linear-gradient(45deg, #8a2be2, #da70d6, #2e8eff);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-
+  background:
+    linear-gradient(#1a1a1a, #1a1a1a) padding-box,
+    linear-gradient(45deg, #8a2be2, #da70d6, #2e8eff) border-box;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  transition: transform 0.2s ease;
-
   position: relative;
-
-  border-radius: 50%;
   cursor: pointer;
+  outline: 1.5px solid transparent;
+  outline-offset: 2px;
+  transition: transform 0.2s ease;
 }
 
-/* Liseré dégradé */
 .user-profile::before {
   content: "";
   position: absolute;
   inset: 0;
-  padding: 2px; /* ÉPAISSEUR DU LISERÉ */
+  padding: 2px;
   border-radius: 50%;
   background: linear-gradient(45deg, #8a2be2, #da70d6, #2e8eff);
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
           mask-composite: exclude;
 }
 
-/* Intérieur */
 .user-profile-inner {
-  position: relative;
   width: 100%;
   height: 100%;
   border-radius: 50%;
   background-color: #1a1a1a;
-
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
 }
 
 .user-profile-inner svg {
-  width: 4vw; /* taille du inner (petit bonhomme) */
+  width: 4vw;
   height: 4vw;
   fill: #fff;
 }
 
 .user-profile:hover {
   transform: scale(1.15);
-  transition: transform 0.2s ease;
+}
+
+h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+
+  background: linear-gradient(
+    90deg,
+    #5b8cff,   /* bleu doux */
+    #b11ea7,   /* violet slate */
+    #8a2be2    /* violet plus lumineux */
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 
