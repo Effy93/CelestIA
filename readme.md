@@ -28,10 +28,12 @@ Il s’agit d’un site web simulant la gestion d’un utilisateur avec **inscri
 
 ## 🖼 Maquette
 
-![Accueil](assets/mockup/CelestIA.png)
+![Accueil](assets/mockup/CelestIA.jpg)
 *Maquette complète avec Figma*
 
-![Profil](assets/mockup/390-Accueil.png)
+## 🖼 Screen 
+
+![Profil](assets/screen/screen.png)
 *Exemple de la page profil*
 
 ---
