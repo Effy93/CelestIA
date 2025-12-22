@@ -44,11 +44,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Scale hover
-  [loginBtn, profileBtn, logoutBtn].forEach(btn => {
-    if (!btn) return;
-    btn.style.transition = "transform 0.2s ease, color 0.2s ease";
-    btn.addEventListener("mouseenter", () => btn.style.transform = "scale(1.1)");
-    btn.addEventListener("mouseleave", () => btn.style.transform = "scale(1)");
-  });
 });

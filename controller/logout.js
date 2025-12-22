@@ -3,7 +3,7 @@ import { auth } from "../model/user.js";
 export function setupLogout(logoutBtn) {
   if (!logoutBtn) return;
 
-  // Sécurité : empêche les doubles bindings
+  // Sécurité : empêche les doubles bindings (empeche la double alert si double ecoute)
   logoutBtn.replaceWith(logoutBtn.cloneNode(true));
   logoutBtn = document.getElementById("nav-btn-logout");
 

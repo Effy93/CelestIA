@@ -182,6 +182,8 @@ git clone https://github.com/Effy-93/CelestIA.git
 ## 📌 Améliorations futures
 
 * Ajouter informations complémentaires sur le profil (email, date d’inscription…)
+* Accessibilité
+* Bouton changement de langue
 * Multi-utilisateurs
 * Amélioration de l’UX et stylisation des boutons
 * SEO avancé

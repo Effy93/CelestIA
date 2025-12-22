@@ -11,19 +11,22 @@ if (goRegister) {
 }
 
 if (formLogin) {
-  formLogin.addEventListener("submit", function(e) {
+  formLogin.addEventListener("submit", async function(e) {
     e.preventDefault();
 
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
-    const result = auth.login(email, password);
-
-   if (result.success) {
-    window.location.href = "profile.html"; // redirection directe
-  } else {
-    errorLogin.textContent = result.message; // affiche l'erreur
-  }
-
+    try {
+      const result = await auth.login(email, password);
+      if (result.success) {
+        window.location.href = "profile.html";
+      } else {
+        errorLogin.textContent = result.message;
+      }
+    } catch (err) {
+      errorLogin.textContent = "Erreur technique, réessayez plus tard.";
+      console.error(err);
+    }
   });
 }

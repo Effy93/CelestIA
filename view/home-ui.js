@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const purchaseMessage = document.getElementById("purchase-message");
   const tabs = document.querySelectorAll(".agent-tab");
 
+  // t = one tab (un onglet)
   function showAgent(index) {
     tabs.forEach(t => t.classList.remove("active"));
     tabs[index].classList.add("active");

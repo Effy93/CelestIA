@@ -4,4 +4,4 @@ export const agents = [
   {name: "Orion", desc: "IA marketing ciblée", img: "assets/img/avatar/orion.svg", link: "#", color: "#4db6ac"},
   {name: "Aya", desc: "IA support client", img: "assets/img/avatar/aya.svg", link: "#", color: "#ff8a65"}
 ];
-// agents.js : définition des agents IA disponibles dans l'application
+// définition des agents IA disponibles dans l'application

@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Affichage user
   if (userNameEl) userNameEl.textContent = `Bienvenue, ${user.name}!`;
-  if (userEmailEl) userEmailEl.textContent = `Email : ${user.email};`;
+  if (userEmailEl) userEmailEl.textContent = `Email : ${user.email}`;
 
   // Affichage logout
   if (logoutBtn) {
