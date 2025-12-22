@@ -33,7 +33,7 @@ Il s’agit d’un site web simulant la gestion d’un utilisateur avec **inscri
 
 ## 🖼 Screen 
 
-![Profil](assets/screen/screen2.png)
+![Profil](assets/screen/screen.png)
 *Exemple de la page profil*
 
 ---
