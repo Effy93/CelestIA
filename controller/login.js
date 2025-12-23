@@ -20,7 +20,7 @@ if (formLogin) {
     try {
       const result = await auth.login(email, password);
       if (result.success) {
-        window.location.href = "profile.html";
+        window.location.href = "index.html";
       } else {
         errorLogin.textContent = result.message;
       }

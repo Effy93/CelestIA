@@ -1,6 +1,7 @@
 import { auth } from "../model/user.js";
 import { setupLogout } from "./logout.js";
 
+// attends que le DOM soit chargé pour exécuter le script
 document.addEventListener("DOMContentLoaded", () => {
   let loginBtn = document.getElementById("nav-btn-login");
   const profileBtn = document.getElementById("nav-btn-profile");

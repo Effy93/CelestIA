@@ -27,7 +27,7 @@ export const auth = {
     return data;
   },
 
-  /** Inscription // devrait être dans controller register*/
+  /** Inscription // devrait être dans controller register */
   async register(name, email, password) {
     const users = JSON.parse(localStorage.getItem("users")) || [];
 
@@ -47,7 +47,7 @@ export const auth = {
     return { success: true };
   },
 
-  /** Connexion  // devrait être dans controller login*/
+  /** Fonction connexion  // devrait être dans controller login */
   async login(email, password) {
     email = email.trim();
     password = password.trim();
@@ -72,15 +72,29 @@ export const auth = {
     localStorage.removeItem("loggedEmail");
   },
 
+  // Va chercher les données utilisateurs
+  // ?. verifie si la valeur existe et n'est pas nulle = email stocké dans localSotrage, sinon renvoi undefined (mais pas d'erreur)
+  // trim() en cas de caractère involontaire (espace) = sécurité est robustesse même si pas forcement nécessaire ici
   getUser() {
     const email = localStorage.getItem("loggedEmail")?.trim();
     if (!email) return null;
 
+    // JSON.parse fait le travail inverse de stringify = il remet en tableau 
     const users = JSON.parse(localStorage.getItem("users")) || [];
+    // find cherche le premier utilisateur dont l’email correspond à l’email stocké
     return users.find(u => u.email === email);
   },
 
+  // Verifie si l'utilisateur est connecté
+  //   - Premier ! inverse la valeur
+  //   - Deuxième ! inverse à nouveau pour obtenir true ou false
+  // Résultat : true si un utilisateur est connecté, false sinon
+  // transforme la chaine de caractère renvoyer par localStorage, en vrai booleen et non en undifined ou null
   isAuthenticated() {
     return !!localStorage.getItem("loggedEmail")?.trim();
   }
+
+//  Donc isAuthenticated retourne true si loggedEmail n’est pas vide ou nul (grâce au ?.),
+// enlève les espaces au début et à la fin grâce à .trim(),
+// et retourne true ou false grâce au double !!, qui inverse deux fois les valeurs et permet de créer un vrai booléen, même avec une donnée sortie de localStorage (qui est donc une chaîne de caractères).
 };
