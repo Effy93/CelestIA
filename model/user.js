@@ -72,6 +72,7 @@ export const auth = {
     localStorage.removeItem("loggedEmail");
   },
 
+  // getUser
   // Va chercher les données utilisateurs
   // ?. verifie si la valeur existe et n'est pas nulle = email stocké dans localSotrage, sinon renvoi undefined (mais pas d'erreur)
   // trim() en cas de caractère involontaire (espace) = sécurité est robustesse même si pas forcement nécessaire ici
@@ -85,6 +86,10 @@ export const auth = {
     return users.find(u => u.email === email);
   },
 
+//  isAuthenticated 
+// retourne true si loggedEmail n’est pas vide ou nul (grâce au ?.),
+// enlève les espaces au début et à la fin grâce à .trim(),
+// et retourne true ou false grâce au double !!, qui inverse deux fois les valeurs et permet de créer un vrai booléen, même avec une donnée sortie de localStorage (qui est donc une chaîne de caractères).
   // Verifie si l'utilisateur est connecté
   //   - Premier ! inverse la valeur
   //   - Deuxième ! inverse à nouveau pour obtenir true ou false
@@ -93,8 +98,5 @@ export const auth = {
   isAuthenticated() {
     return !!localStorage.getItem("loggedEmail")?.trim();
   }
-
-//  Donc isAuthenticated retourne true si loggedEmail n’est pas vide ou nul (grâce au ?.),
-// enlève les espaces au début et à la fin grâce à .trim(),
-// et retourne true ou false grâce au double !!, qui inverse deux fois les valeurs et permet de créer un vrai booléen, même avec une donnée sortie de localStorage (qui est donc une chaîne de caractères).
 };
+
