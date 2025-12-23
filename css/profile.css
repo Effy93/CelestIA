@@ -1,6 +1,4 @@
-html {
-  font-size: 16px;
-}
+/* ---- Profile Layout ---- */
 .profile-layout {
   display: flex;
   flex-direction: column;
@@ -8,99 +6,174 @@ html {
   max-width: 1100px;
   margin: 0 auto;
   padding: 1rem;
+  align-items: center;
 }
 
+/* ---- Profile Card ---- */
 .profile-card {
-  padding: 1.5rem;
-  border-radius: 15px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-  background-color: white;
+  width: 100%;
+  max-width: 400px;
+  padding: 1.8rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  background-color: #fff;
+  text-align: center;
 }
 
+/* ---- Profile Card Header ---- */
+.profile-card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #A0A0D5;
+  margin: 0;
+}
+
+#edit-message {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.edit-profile-btn {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.edit-profile-btn:hover { transform: scale(1.25); }
+
+/* ---- Profile Card p ---- */
+.profile-card > p {
+  font-size: 1rem;
+  color: #333;
+  margin: 0.5rem 0;
+}
+
+/* ---- Edit Profile Form ---- */
+#editProfileForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem;
+  border-radius: 6px; /* moins arrondi */
+  background-color: #f0f4ff;
+  margin-top: 0.5rem;
+}
+
+#editProfileForm label {
+  width: 100%;
+  text-align: center;
+}
+
+#editProfileForm input {
+  width: 100%;
+  max-width: 250px;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px; /* moins arrondi */
+  border: 1px solid #cfd6e3;
+  font-size: 1rem;
+}
+
+/* ---- IA Container ---- */
 .ia-container {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   padding: 1.5rem;
-  border-radius: 15px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  background-color: #fff;
 }
 
+/* ---- Sidebar ---- */
 .sidebar {
   display: flex;
   gap: 0.5rem;
-  overflow-x: auto;
 }
 
 .sidebar button {
-  flex: 0 0 auto;
   border: 2px solid #ddd;
-  border-radius: 10px;
+  border-radius: 6px; /* moins arrondi */
   padding: 0.5rem 1rem;
   cursor: pointer;
-  font-weight: 500;
-  transition: all 0.2s ease;
+  background-color: #f5f5f5;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
 }
 
 .sidebar button:hover {
   background-color: #6a5acd;
-  transition: color 0.3s;
+  color: #fff;
+  transform: scale(1.05);
 }
 
 .sidebar button.active {
   background-color: #6a5acd;
   border-color: #6a5acd;
-  color: white;
+  color: #fff;
 }
 
-
+/* ---- Agent Info & Cards ---- */
 .agent-info {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  gap: 1rem;
+  padding-top: 1rem;
+  width: 100%;
 }
 
 .agent-card {
+  flex: 0 0 90%;
   max-width: 400px;
-  width: 100%;
-  padding: 1.5rem;
+  padding: 1.8rem;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #fafafa, #f0f0f5);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
   text-align: center;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  background-color: #fafafa;
+  transition: box-shadow 0.3s ease;
+}
+
+.agent-card:hover {
+  box-shadow: 0 16px 35px rgba(0,0,0,0.15);
 }
 
 .agent-img {
-  width: 100%;
-  max-width: 180px;
-  height: 180px;
-  object-fit: contain;
-  margin: 0 auto 1rem;
-  display: block;
-}
-
-#userName {
-  text-align: center;
-  margin: 1.5rem 0;
-}
-
-
-.profile-card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
   margin-bottom: 1rem;
+  object-fit: contain;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.edit-profile-btn {
-  width: 22px;
-  height: 22px;
-  cursor: pointer;
-  transition: transform 0.2s ease;
+.agent-card:hover .agent-img {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
-.edit-profile-btn:hover {
-  transform: scale(1.25);
-  transition: transform 0.2s ease;
+.agent-card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.agent-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
 }

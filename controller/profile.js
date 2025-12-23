@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const logoutBtn = document.getElementById("nav-btn-logout");
 
   // Affichage user
-  if (userNameEl) userNameEl.textContent = `Bienvenue, ${user.name}!`;
-  if (userEmailEl) userEmailEl.textContent = `Email : ${user.email}`;
+  if (userNameEl) userNameEl.textContent = `Bienvenue ${user.name}`;
+  if (userEmailEl) userEmailEl.textContent = ` ${user.email}`;
 
   // Affichage logout
   if (logoutBtn) {
