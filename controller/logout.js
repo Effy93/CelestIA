@@ -1,15 +1,15 @@
 import { auth } from "../model/user.js";
+import { confirmLogout } from "../view/show-message.js";
 
 export function setupLogout(logoutBtn) {
   if (!logoutBtn) return;
 
-  // Sécurité : empêche les doubles bindings (empeche la double alert si double ecoute)
   logoutBtn.replaceWith(logoutBtn.cloneNode(true));
   logoutBtn = document.getElementById("nav-btn-logout");
 
-  logoutBtn.addEventListener("click", () => {
-    const confirmLogout = confirm("Êtes-vous sûr de vouloir vous déconnecter ?");
-    if (!confirmLogout) return;
+  logoutBtn.addEventListener("click", async () => {
+    const confirmed = await confirmLogout();
+    if (!confirmed) return;
 
     auth.logout();
     window.location.href = "index.html";

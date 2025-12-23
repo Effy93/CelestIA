@@ -1,5 +1,5 @@
 import { auth } from "../model/user.js";
-import { showMessage } from "../view/ui.js";
+import { showMessage } from "../view/show-message.js";
 
 const formRegister = document.getElementById("registerForm");
 const msgRegister = document.getElementById("register-message");

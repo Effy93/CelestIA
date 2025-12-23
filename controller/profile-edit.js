@@ -1,5 +1,5 @@
 import { auth } from "../model/user.js";
-import { showMessage} from "../view/ui.js";
+import { showMessage} from "../view/show-message.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const user = auth.getUser();
