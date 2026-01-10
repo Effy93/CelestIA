@@ -118,7 +118,7 @@ h2 {
 .sidebar button:hover {
   background-color: #6a5acd;
   color: #fff;
-  transform: scale(1.05);
+  transform: translateY(-1px);
 }
 
 .sidebar button.active {
