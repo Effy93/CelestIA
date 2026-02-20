@@ -16,8 +16,9 @@
   padding: 1.8rem;
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  background-color: #fff;
   text-align: center;
+  background-color: rgba(30, 22, 74, 0.226);
+  color: black;
 }
 
 /* ---- Profile Card Header ---- */
@@ -51,12 +52,13 @@ h2 {
   top: 0;
   right: 0;
 }
+
 .edit-profile-btn:hover { transform: scale(1.25); }
 
 /* ---- Profile Card p ---- */
 .profile-card > p {
   font-size: 1rem;
-  color: #333;
+  color: wheat;
   margin: 0.5rem 0;
 }
 
@@ -95,7 +97,8 @@ h2 {
   padding: 1.5rem;
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  background-color: #fff;
+  background-color: rgba(30, 22, 74, 0.226);
+  color: white;
 }
 
 /* ---- Sidebar ---- */
@@ -134,6 +137,7 @@ h2 {
   gap: 1rem;
   padding-top: 1rem;
   width: 100%;
+  
 }
 
 .agent-card {
@@ -141,7 +145,8 @@ h2 {
   max-width: 400px;
   padding: 1.8rem;
   border-radius: 20px;
-  background: linear-gradient(145deg, #fafafa, #f0f0f5);
+  background-color: rgba(30, 22, 74, 0.226);
+  color: white;
   box-shadow: 0 8px 20px rgba(0,0,0,0.05);
   text-align: center;
   transition: box-shadow 0.3s ease;
@@ -154,8 +159,6 @@ h2 {
 .agent-img {
   width: 130px;
   height: 130px;
-  border-radius: 50%;
-  border: 2px solid #ddd;
   margin-bottom: 1rem;
   object-fit: contain;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -174,6 +177,6 @@ h2 {
 
 .agent-card p {
   font-size: 1rem;
-  color: #555;
+  color: wheat;
   line-height: 1.5;
 }

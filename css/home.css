@@ -17,6 +17,7 @@
     justify-content: center;
     gap: 1rem;
     width: 100%;
+
 }
 
 .sidebar button:hover {
@@ -36,7 +37,7 @@
     padding: 0.75rem 1rem;
     border: none;
     cursor: pointer;
-    background-color: #ddd;
+    background-color: #4222c2;
     border-radius: 10px;
     font-weight: bold;
     transition: background-color 0.3s, color 0.3s;
@@ -60,7 +61,8 @@
 
 /* Agent card */
 .agent-card {
-    background-color: white;
+    background-color: rgba(30, 22, 74, 0.226);
+    color: white;
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
